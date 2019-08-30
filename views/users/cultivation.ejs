@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <% include ./partials/_navbar.ejs %>
+
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Cultivation
+                </h1>
+                <h2 class="subtitle">
+                    Cultivation details page. Overview of your cultivation.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div class="content-profile columns">
+            <% include ./partials/_menu.ejs %>
+            <% include ./partials/_cultivation-details.ejs %>
+        </div>
+
+    </div>
+
+    <% include ../partials/_footer.ejs %>
+
+</body>
+
+</html>

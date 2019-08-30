@@ -1,8 +1,33 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css');
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.login {
+  box-sizing: border-box;
+  padding: 60px 50px;
+  max-width: 400px;  
+}
+.login h2 {
+  color: rgb(32, 32, 32);
+  font-size: 1.6rem;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px 0px 25px 0px;
+}
+
+.content-profile {
+    padding: 30px 0px;
+}
+
+.milestone {
+    margin-bottom: 15px;
+}
+
+.create-milestone .modal-card {
+    margin-top: 200px;
 }

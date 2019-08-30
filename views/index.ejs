@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <% include ./partials/_navbar.ejs %>
+
+  <section class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Primary bold title
+        </h1>
+        <h2 class="subtitle">
+          Primary bold subtitle
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <% include ./partials/_footer.ejs %>
+
+</body>
+
 </html>
