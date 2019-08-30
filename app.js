@@ -1,8 +1,13 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var passport   = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var session    = require('express-session');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var passport = require("bcryptjs");
+require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -19,7 +24,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: "Heloo From The Other Side",
+  resave: false,
+  saveUninitialized: false,
+}));
+ 
+// app.use(passport.initialize());
+ 
+// app.use(passport.session());
+
 app.use('/', indexRouter);
+
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

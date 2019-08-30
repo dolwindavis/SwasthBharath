@@ -13,7 +13,7 @@ require('dotenv').config({ path: 'variables.env' });
 /**
  * Connecting to the database mysql
  */
-const sequelize = new Sequelize('swasthbharath','imtron', '19161412', {
+const sequelize = new Sequelize('swasthbharath','imtron','19161412',{
   host: '127.0.0.1',
   dialect: 'mysql'
 });
@@ -29,6 +29,8 @@ sequelize
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
+
+var db = require('../models');
 
 /**
  * Get port from environment and store in Express.
