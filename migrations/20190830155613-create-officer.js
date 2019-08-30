@@ -10,7 +10,7 @@ module.exports = {
       },
       locality: {
 
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
 
       },
       designation: {

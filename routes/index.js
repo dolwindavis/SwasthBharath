@@ -6,8 +6,26 @@ var authController = require("../Controllers/authController");
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   res.render('index', { title: 'Swasth Bharath' });
+});
+
+router.get('/cultivation', function(req, res) {
+
+  res.render('users/cultivation',{ title: 'Swasth Bharath' });
+
+});
+
+router.get('/profile', function(req, res) {
+
+  res.render('users/profile',{ title: 'Swasth Bharath' });
+  
+});
+
+router.get('/signin', function(req, res) {
+
+  res.render('signin',{ title: 'Swasth Bharath' });
+  
 });
 
 router.get('/signup',userController.signUpView);

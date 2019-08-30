@@ -13,6 +13,8 @@ authController.login = (req, res) => {
       req.session.email = user.email;
       req.session.userid = user.id;
 
+      return res.render('/profile');
+
     }
 
   });

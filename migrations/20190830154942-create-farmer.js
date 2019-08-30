@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       locality:{
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
      verification:{
         type: Sequelize.INTEGER
