@@ -4,9 +4,31 @@
  * Module dependencies.
  */
 
+var Sequelize = require('sequelize');
 var app = require('../app');
 var debug = require('debug')('swasthbharath:server');
 var http = require('http');
+require('dotenv').config({ path: 'variables.env' });
+
+/**
+ * Connecting to the database mysql
+ */
+const sequelize = new Sequelize(process.env.DB, process.env.USER, process.env.PASS, {
+  host: 'localhost:3307',
+  dialect: 'mysql'
+});
+
+/**
+ * Testing the database connectivity
+ */
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 
 /**
  * Get port from environment and store in Express.

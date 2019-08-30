@@ -4,15 +4,24 @@ version: '3.1'
 services:
 
   db:
-    image: mysql
+    image: mysql:5.7
     volumes:
       - ./data:/var/lib/mysql
-    command: --default-authentication-plugin=mysql_native_password
+    # command: --default-authentication-plugin=mysql_native_password
     restart: always
     logging:
         driver: none
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: 'swasthbharath'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3307:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3307'
 
   web:
     build: './'
