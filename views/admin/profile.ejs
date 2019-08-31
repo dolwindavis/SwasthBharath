@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <% include ./partials/_navbar.ejs %>
+
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img class="is-rounded" src="https://ui-avatars.com/api/?name=John%20Smith">
+                                </figure>
+                            </div>
+                            <div class="media-content" style="color: #363636; padding-top: 25px;">
+                                <p class="title is-4" style="color: #363636; margin-bottom: 5px;">John Smith</p>
+                                <span class="tag is-warning">Officer</span>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            Agriculture officer
+                             <a>@Bengaluru North</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div class="content-profile columns" style="display: block;">
+            <input type="radio" id="pic" name="nav-tab" checked>
+            <input type="radio" id="music" name="nav-tab">
+            <input type="radio" id="video" name="nav-tab">
+            <input type="radio" id="doc" name="nav-tab">
+            <div class="tabs">
+                <ul>
+                    <li><label for="pic"><a>Requests</a></label></li>
+                    <li><label for="music"><a>Verifications</a></label></li>
+                    <li><label for="video"><a>Certifications</a></label></li>
+                    <li><label for="doc"><a>Notifications</a></label></li>
+                </ul>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane content-pic"><% include ./partials/_admin-components.ejs %></div>
+                <div class="tab-pane content-music"><% include ./partials/_verifications.ejs %></div>
+                <div class="tab-pane content-video"><% include ./partials/_certifications.ejs %></div>
+                <div class="tab-pane content-doc"><% include ./partials/_notifications.ejs %></div>
+            </div>
+            <!-- <% include ./partials/_menu.ejs %>   -->
+            <!-- <% include ./partials/_admin-components.ejs %> -->
+        </div>
+
+    </div>
+
+    <% include ../partials/_footer.ejs %>
+
+</body>
+
+</html>
