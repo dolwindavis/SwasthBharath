@@ -8,8 +8,30 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      role_id: {
+      cultivation_id: {
+
         type: Sequelize.INTEGER
+        
+      },
+      title:{
+
+        type: Sequelize.STRING
+
+      },
+      description:{
+
+        type: Sequelize.STRING
+
+      },
+      image:{
+        
+        type:Sequelize.STRING
+
+      },
+      date:{
+        
+        type:Sequelize.STRING
+
       },
       createdAt: {
         allowNull: false,

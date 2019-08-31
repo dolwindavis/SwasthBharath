@@ -20,9 +20,10 @@ exports.createFarmers = async (req, res) => {
     
     let farmerId = await db.Farmer.create({
 
-        adhar:req.body.adhar ,
+        adhar:req.body.adhar,
         locality:req.body.locality,
-        verification: 0
+        verification: 0,
+        user_id:UserId.id
 
     });
 

@@ -14,6 +14,9 @@ module.exports = {
       locality:{
         type: Sequelize.STRING
       },
+      user_id:{
+        type: Sequelize.STRING
+      },
      verification:{
         type: Sequelize.INTEGER
       },

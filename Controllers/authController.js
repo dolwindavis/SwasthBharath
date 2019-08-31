@@ -11,20 +11,26 @@ authController.login = (req, res) => {
     if(user != null){
 
       req.session.email = user.email;
-      req.session.userid = user.id;
+      req.session.user_id = user.id;
 
-      return res.render('/profile');
+      return res.redirect('/profile');
 
     }
 
   });
 
+  // return res.redirect('/signin');
+  
 };
-  exports.logout = function(req, res) {
+
+
+authController.logout = (req, res) => {
 
     req.session.destroy();
 
-  };
+    return res.redirect('/');
+
+};
 
 
   module.exports = authController;

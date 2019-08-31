@@ -8,8 +8,29 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      role_id: {
+      user_id: {
         type: Sequelize.INTEGER
+      },
+      area: {
+        type: Sequelize.INTEGER
+      },
+      time:{
+        type: Sequelize.INTEGER
+      },
+      crop:{
+
+        type:Sequelize.STRING,
+
+      },
+      title:{
+        
+        type:Sequelize.STRING,
+
+      },
+      description:{
+        
+        type:Sequelize.STRING,
+
       },
       createdAt: {
         allowNull: false,
