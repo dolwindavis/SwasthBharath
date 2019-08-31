@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <% include ./partials/_navbar.ejs %>
+
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4">John Smith</p>
+                                <p class="subtitle is-6">@johnsmith</p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                            <a href="#">#css</a> <a href="#">#responsive</a>
+                            <br>
+                            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div class="content-profile columns" style="display: block;">
+            <input type="radio" id="pic" name="nav-tab" checked>
+            <input type="radio" id="music" name="nav-tab">
+            <input type="radio" id="video" name="nav-tab">
+            <input type="radio" id="doc" name="nav-tab">
+            <div class="tabs">
+                <ul>
+                    <li><label for="pic"><a>Requests</a></label></li>
+                    <li><label for="music"><a>Verifications</a></label></li>
+                    <li><label for="video"><a>Certifications</a></label></li>
+                    <li><label for="doc"><a>Notifications</a></label></li>
+                </ul>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane content-pic"><% include ./partials/_admin-components.ejs %></div>
+                <div class="tab-pane content-music"><% include ./partials/_verifications.ejs %></div>
+                <div class="tab-pane content-video"><% include ./partials/_certifications.ejs %></div>
+                <div class="tab-pane content-doc"><% include ./partials/_notifications.ejs %></div>
+            </div>
+            <!-- <% include ./partials/_menu.ejs %>   -->
+            <!-- <% include ./partials/_admin-components.ejs %> -->
+        </div>
+
+    </div>
+
+    <% include ../partials/_footer.ejs %>
+
+</body>
+
+</html>

@@ -11,8 +11,9 @@ a {
 .login {
   box-sizing: border-box;
   padding: 60px 50px;
-  max-width: 400px;  
+  max-width: 400px;
 }
+
 .login h2 {
   color: rgb(32, 32, 32);
   font-size: 1.6rem;
@@ -21,13 +22,30 @@ a {
 }
 
 .content-profile {
-    padding: 30px 0px;
+  padding: 30px 0px;
 }
 
 .milestone {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .create-milestone .modal-card {
-    margin-top: 200px;
+  margin-top: 200px;
+}
+
+input[type="radio"],
+.tab-pane {
+  display: none;
+}
+
+/* the magic */
+#pic:checked~.tab-content>.content-pic,
+#music:checked~.tab-content>.content-music,
+#video:checked~.tab-content>.content-video,
+#doc:checked~.tab-content>.content-doc {
+  display: block;
+}
+
+.content-profile {
+    display: block;
 }
